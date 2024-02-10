@@ -75,7 +75,7 @@ class VisualTimer {
         }
 
         private void displayTimeIsUp() {
-            label.setText("Time's up!");
+            label.setText("SLAVA UKRAINE!");
         }
     }
 }
