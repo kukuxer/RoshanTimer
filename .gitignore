@@ -2,7 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-gimn-ukrainyi.wav
+*.wav
 
 ### Eclipse ###
 .apt_generated

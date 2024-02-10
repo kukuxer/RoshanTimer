@@ -40,6 +40,7 @@ public class RoshanTimer {
             button.addActionListener(e -> {
                 button.setVisible(false);
                //  frame.setState(Frame.ICONIFIED);
+                SoundPlayer.playSound("roziezdChyspani.wav");
                 visualTimerPanel.startTimers();
             });
         });

@@ -9,7 +9,7 @@ class VisualTimer {
     private int secondsRemaining;
     private JLabel label;
     private Color boxColor;
-      boolean soundPlayed = false;
+
     VisualTimerPanel visualTimerPanel;
     private Timer timer1;
     //private Timer timer2;
@@ -19,7 +19,6 @@ class VisualTimer {
         this.boxColor = boxColor;
         this.label = createTimerLabel();
         this.visualTimerPanel = visualTimerPanel;
-        this.soundPlayed = false;
         this.timer1 = new Timer(1000, new TimerActionListener());
         //this.timer2 = new Timer(1000, new TimerActionListener());
     }
@@ -54,18 +53,14 @@ class VisualTimer {
         @Override
         public void actionPerformed(ActionEvent e) {
           //  System.out.println(visualTimerPanel.timer1.getLabel().getText());
-            System.out.println("Before soundPlayed: " + soundPlayed);
             if(visualTimerPanel.timer1.getLabel().getText().equals("00:01") && !RoshanTimer.soundPlayed){
-                SoundPlayer.playSound("gimn-ukrainyi.wav");
+                SoundPlayer.playSound("voimyaAllaha.wav");
                 RoshanTimer.soundPlayed = true;
-                System.out.println("aboba");
             }
             if(visualTimerPanel.timer2.getLabel().getText().equals("00:01") && !RoshanTimer.soundPlayed2){
-                SoundPlayer.playSound("gimn-ukrainyi.wav");
+                SoundPlayer.playSound("RovneeRovnogo.wav");
                 RoshanTimer.soundPlayed2 = true;
-                System.out.println("aboba2");
             }
-            System.out.println("After soundPlayed: " + soundPlayed);
             if  (secondsRemaining > 0) {
                 updateTimerDisplay();
                 secondsRemaining--;
