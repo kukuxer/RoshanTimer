@@ -40,7 +40,9 @@ public class RoshanTimer {
             button.addActionListener(e -> {
                 button.setVisible(false);
                //  frame.setState(Frame.ICONIFIED);
-                SoundPlayer.playSound("roziezdChyspani.wav");
+                String desktopPath = System.getProperty("user.home") + "\\Desktop";
+                String filePath = desktopPath + "\\roziezdChyspani.wav";
+                SoundPlayer.playSound(filePath);
                 visualTimerPanel.startTimers();
             });
         });

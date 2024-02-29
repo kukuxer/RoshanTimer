@@ -12,10 +12,10 @@ class VisualTimerPanel extends JPanel {
         setLayout(new GridLayout(1, 2)); // Use GridLayout to divide the panel into two halves
 
         // Create a visual timer for the first countdown from 11 to 0 (Red)
-        timer1 = new VisualTimer(60*8, Color.RED,VisualTimerPanel.this);
+        timer1 = new VisualTimer(5, Color.RED,VisualTimerPanel.this);
 
         // Create a visual timer for the second countdown from 8 to 0 (Blue)
-        timer2 = new VisualTimer(60*11, Color.BLUE,VisualTimerPanel.this);
+        timer2 = new VisualTimer(10, Color.BLUE,VisualTimerPanel.this);
 
         // Add visual timers to the panel
         add(timer1.getLabel());

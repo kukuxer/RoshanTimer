@@ -54,11 +54,13 @@ class VisualTimer {
         public void actionPerformed(ActionEvent e) {
           //  System.out.println(visualTimerPanel.timer1.getLabel().getText());
             if(visualTimerPanel.timer1.getLabel().getText().equals("00:01") && !RoshanTimer.soundPlayed){
-                SoundPlayer.playSound("voimyaAllaha.wav");
+                String desktopPath = System.getProperty("user.home") + "\\Desktop\\voimyaAllaha.wav";
+                SoundPlayer.playSound(desktopPath);
                 RoshanTimer.soundPlayed = true;
             }
             if(visualTimerPanel.timer2.getLabel().getText().equals("00:01") && !RoshanTimer.soundPlayed2){
-                SoundPlayer.playSound("RovneeRovnogo.wav");
+                String desktopPath2 = System.getProperty("user.home") + "\\Desktop\\RovneeRovnogo.wav";
+                SoundPlayer.playSound(desktopPath2);
                 RoshanTimer.soundPlayed2 = true;
             }
             if  (secondsRemaining > 0) {
